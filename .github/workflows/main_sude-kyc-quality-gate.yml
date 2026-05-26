@@ -66,11 +66,10 @@ jobs:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F48549E890EF44A38BD38C6C58E67235 }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_2643B0EACA13487B8F27798A82B00658 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3D771CCD7D8F4D94853A25F2D074D9B4 }}
-
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
           app-name: 'sude-kyc-quality-gate'
           slot-name: 'Production'
-          
+          package: .
