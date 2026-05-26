@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Quality Gate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>KYC Quality Gate</h1>
+        <p>Data Quality Validator for Banking Onboarding</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Customer Profile</h2>
+            <div class="form-group">
+                <label>Customer Type</label>
+                <select id="customerType">
+                    <option value="individual">Individual</option>
+                    <option value="corporate">Corporate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Country Risk Level</label>
+                <select id="countryRisk">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Customer Segment</label>
+                <select id="customerSegment">
+                    <option value="retail">Retail</option>
+                    <option value="sme">SME</option>
+                    <option value="corporate">Corporate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Expected Monthly Volume</label>
+                <select id="monthlyVolume">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+
+            <h2>Identity &amp; Tax Information</h2>
+            <div class="form-group checkbox-group">
+                <label><input type="checkbox" id="idDocument"> ID Document Provided</label>
+            </div>
+            <div class="form-group checkbox-group">
+                <label><input type="checkbox" id="addressProof"> Address Proof Provided</label>
+            </div>
+            <div class="form-group checkbox-group">
+                <label><input type="checkbox" id="taxId"> Tax ID Provided</label>
+            </div>
+
+            <h2>Compliance Information</h2>
+            <div class="form-group checkbox-group">
+                <label><input type="checkbox" id="sourceOfFunds"> Source of Funds Declared</label>
+            </div>
+            <div class="form-group checkbox-group">
+                <label><input type="checkbox" id="pepStatus"> PEP Status (Politically Exposed Person)</label>
+            </div>
+            <div class="form-group checkbox-group">
+                <label><input type="checkbox" id="sanctionsMatch"> Sanctions Match Flag</label>
+            </div>
+
+            <button id="validateBtn" onclick="validateKYC()">Validate KYC Data</button>
+        </section>
+
+        <section class="result-section" id="resultSection" style="display:none;">
+            <h2>Validation Result</h2>
+
+            <div class="score-card">
+                <span class="score-label">Data Quality Score</span>
+                <span class="score-value" id="scoreValue">--</span>
+                <span class="score-total">/ 100</span>
+            </div>
+
+            <div class="status-cards">
+                <div class="card">
+                    <span class="card-label">Risk Level</span>
+                    <span class="card-value" id="riskLevel">--</span>
+                </div>
+                <div class="card">
+                    <span class="card-label">KYC Status</span>
+                    <span class="card-value" id="kycStatus">--</span>
+                </div>
+            </div>
+
+            <div class="list-section" id="missingSection">
+                <h3>Missing Documents</h3>
+                <ul id="missingList"></ul>
+            </div>
+
+            <div class="list-section" id="warningsSection">
+                <h3>Warnings</h3>
+                <ul id="warningsList"></ul>
+            </div>
+
+            <div class="list-section" id="recommendationsSection">
+                <h3>Recommended Actions</h3>
+                <ul id="recommendationsList"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

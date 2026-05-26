@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1a1a2e;
+}
+
+header {
+    background-color: #0d3b6e;
+    color: white;
+    padding: 24px 40px;
+    border-bottom: 4px solid #1a6bb5;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 0.95rem;
+    color: #a8c8f0;
+    margin-top: 4px;
+}
+
+main {
+    max-width: 860px;
+    margin: 36px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.form-section {
+    background: white;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #0d3b6e;
+    margin: 24px 0 12px 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e8eef5;
+}
+
+h2:first-child {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 4px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #ccd6e0;
+    border-radius: 5px;
+    font-size: 0.92rem;
+    background: #f8fafc;
+    color: #1a1a2e;
+    outline: none;
+}
+
+.form-group select:focus {
+    border-color: #1a6bb5;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #0d3b6e;
+}
+
+button#validateBtn {
+    margin-top: 28px;
+    width: 100%;
+    padding: 13px;
+    background-color: #0d3b6e;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+}
+
+button#validateBtn:hover {
+    background-color: #1a6bb5;
+}
+
+.result-section {
+    background: white;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.result-section h2 {
+    margin-top: 0;
+}
+
+.score-card {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    background: #f0f6ff;
+    border: 1px solid #c2d9f5;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.score-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0d3b6e;
+    flex: 1;
+}
+
+.score-value {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #0d3b6e;
+}
+
+.score-total {
+    font-size: 1rem;
+    color: #666;
+}
+
+.status-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.card {
+    background: #f8fafc;
+    border: 1px solid #dde6ef;
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #888;
+}
+
+.card-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0d3b6e;
+}
+
+.card-value.critical { color: #c0392b; }
+.card-value.high { color: #e67e22; }
+.card-value.medium { color: #f39c12; }
+.card-value.low { color: #27ae60; }
+
+.list-section {
+    margin-bottom: 20px;
+}
+
+.list-section h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.list-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.list-section ul li {
+    font-size: 0.92rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border-left: 3px solid #1a6bb5;
+    background: #f5f8ff;
+    color: #333;
+}
+
+#warningsSection ul li {
+    border-left-color: #e67e22;
+    background: #fff8f0;
+}
+
+#recommendationsSection ul li {
+    border-left-color: #27ae60;
+    background: #f0fff4;
+}
