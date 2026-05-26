@@ -1,4 +1,4 @@
-const FUNCTION_URL = "YOUR_AZURE_FUNCTION_URL_HERE";
+const FUNCTION_URL = "https://sude-kyc-api-france-endnercbd7adftgj.francecentral-01.azurewebsites.net/api/validateKyc";
 
 function validateKYC() {
     const formData = {
